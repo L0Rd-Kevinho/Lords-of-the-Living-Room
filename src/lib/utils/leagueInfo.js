@@ -65,7 +65,7 @@ export const managers = [
       "rival": {
         name: "Kevin", // Can be anything (usually your rival's name)
         link: 3, // manager array number within this array, or null to link back to all managers page
-        image: "/managers/Kevin.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
+        image: "/managers/Kev.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
       "philosophy": "Talk big, win often.",
     },
@@ -74,7 +74,7 @@ export const managers = [
       "name": "Kevin Vieira",
       "location": "Twin Cities", // (optional)
       "bio": "The league commish who governs the living room from the throne, enforcing  order with an unshakable presence and just enough menacce to keep chaos at bay. Everything runs calm, calculated, and impeccably professional - not because it has to, but because it bends to his will. When the standings are final, it's no surprise he stands above the rest.",
-      "photo": "/managers/Kevin.jpg", // square ratio recommended (no larger than 500x500)
+      "photo": "/managers/Kev.jpg", // square ratio recommended (no larger than 500x500)
       "favoriteTeam": "min", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
       "mode": "Win Now", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
       "rival": {
@@ -155,7 +155,7 @@ export const managers = [
       "rival": {
         name: "Kevin", // Can be anything (usually your rival's name)
         link: 3, // manager array number within this array, or null to link back to all managers page
-        image: "/managers/Kevin.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
+        image: "/managers/Kev.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
       "philosophy": "Dominate the space and endure the chaos.",
     },
