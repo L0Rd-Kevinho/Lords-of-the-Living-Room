@@ -7,12 +7,11 @@ export const enableBlog = false; // requires VITE_CONTENTFUL_ACCESS_TOKEN and VI
 
 /*   STEP 2   */
 export const homepageText = `
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Welcome, brave souls, to the Lords of the Living Room Dynasty League - a league where legends are forged from couches, trophies are won in sweatpants, and power is measured by waiver-wire wizardry and questionable trade logic.</p>
+  <p>This league is ruled not by kings or emperors, but by Lords - strategists, schemers, and lifelong grudgeholders who gather year after year to prove their dominance in the most sacred arena of all: the living room. Here, rebuilding takes patience, championships are immortalized, and bad draft pick will remain forever.</p>
+  <p>Dynasties rise and fall, trash talk echoes endlessly. The rules are firm, the rivalries are fierce, and the group chat is never silent. Whether you are chasing glory, clinging to success, or convincing others that this is your year...know this:</p>
+  <p>Once you enter this living room, you will never leave.</p>
+  <p>May your picks hit, your players stay healthy, and your couch forever feel like a throne.</p>
 `;
 
 /*   STEP 3   */
