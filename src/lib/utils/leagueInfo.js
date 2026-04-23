@@ -28,7 +28,7 @@ export const managers = [
       "managerID": "459076428353236992",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
       "name": "Lucas Wencl",
       "location": "Twin Cities", // (optional)
-      "bio": "Lucas is a founding member of the Fantasy Football Fellas podcast who enters every season with that same "trust me, I've watched the tape" mentality. His dynasty strategy is accompanied by a long explanation of why he was actually right all along. Win or lose, Lucas is never wrong - he's just early.",
+      "bio": "Lucas is a founding member of the Fantasy Football Fellas podcast who enters every season with that same \"trust me, I've watched the tape\" mentality. His dynasty strategy is accompanied by a long explanation of why he was actually right all along. Win or lose, Lucas is never wrong - he's just early.",
       "photo": "/managers/Lucas.jpg", // square ratio recommended (no larger than 500x500)
       "favoriteTeam": "min", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
       "mode": "Win Now", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
@@ -37,7 +37,7 @@ export const managers = [
         link: 5, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Josh.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "Never wrong, just early.",
+      "philosophy": "Never wrong, just early."
     },
     {
       "managerID": "656656370883448832",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
@@ -52,13 +52,13 @@ export const managers = [
         link: 2, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Cam.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "Less talk, more results.",
+      "philosophy": "Less talk, more results."
     },
     {
       "managerID": "703266307541389312",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
       "name": "Cameron Lawrence",
       "location": "Twin Cities", // (optional)
-      "bio": "The loudest member of the Fellas, Cam enters every season already talking like it's over - and annoyingly, the standings tend to agree. His trash talk is loud, nonstop, and delivered with the kind of confidence you only earn by winning early and often. By the time anyone thinks to doubt him, he's already moved on to reminfing you why you should've known better.",
+      "bio": "The loudest member of the Fellas, Cam enters every season already talking like it's over - and annoyingly, the standings tend to agree. His trash talk is loud, nonstop, and delivered with the kind of confidence you only earn by winning early and often. By the time anyone thinks to doubt him, he's already moved on to reminding you why you should've known better.",
       "photo": "/managers/Cam.jpg", // square ratio recommended (no larger than 500x500)
       "favoriteTeam": "min", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
       "mode": "Rebuild", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
@@ -67,13 +67,13 @@ export const managers = [
         link: 3, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Kev.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "Talk big, win often.",
+      "philosophy": "Talk big, win often."
     },
     {
       "managerID": "706608625463947264",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
       "name": "Kevin Vieira",
       "location": "Twin Cities", // (optional)
-      "bio": "The league commish who governs the living room from the throne, enforcing  order with an unshakable presence and just enough menacce to keep chaos at bay. Everything runs calm, calculated, and impeccably professional - not because it has to, but because it bends to his will. When the standings are final, it's no surprise he stands above the rest.",
+      "bio": "The league commish who governs the living room from the throne, enforcing  order with an unshakable presence and just enough menace to keep chaos at bay. Everything runs calm, calculated, and impeccably professional - not because it has to, but because it bends to his will. When the standings are final, it's no surprise he stands above the rest.",
       "photo": "/managers/Kev.jpg", // square ratio recommended (no larger than 500x500)
       "favoriteTeam": "min", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
       "mode": "Win Now", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
@@ -82,7 +82,7 @@ export const managers = [
         link: 2, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Cam.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "Control is established, outcomes are inevitable.",
+      "philosophy": "Control is established, outcomes are inevitable."
     },
     {
       "managerID": "715072573137838080",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
@@ -97,7 +97,7 @@ export const managers = [
         link: 7, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Ben.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "Others hope, history assures.",
+      "philosophy": "Others hope, history assures."
     },
     {
       "managerID": "36259514256445440",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
@@ -112,13 +112,13 @@ export const managers = [
         link: 0, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Lucas.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "It's not arrogance when you're just better.",
+      "philosophy": "It's not arrogance when you're just better."
     },
     {
       "managerID": "987399674455810048",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
       "name": "Kyle Gruber",
       "location": "San Diego", // (optional)
-      "bio": "Kyle is the only Bears fan, radiating confidence forged through grit, perseverance, and an elite tan that never fades. A tough mudder finished with main character energy, he is battle tested, self assured, and aware that the camer usually finds him - often with company. He plays to win with swagger and certainty",
+      "bio": "Kyle is the only Bears fan, radiating confidence forged through grit, perseverance, and an elite tan that never fades. A tough mudder finisher with main character energy, he is battle tested, self assured, and aware that the camera usually finds him - often with company. He plays to win with swagger and certainty",
       "photo": "/managers/Kyle.jpg", // square ratio recommended (no larger than 500x500)
       "favoriteTeam": "chi", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
       "mode": "Win Now", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
@@ -127,7 +127,7 @@ export const managers = [
         link: 9, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Kinels.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "Outwork, win, and look good.",
+      "philosophy": "Outwork, win, and look good."
     },
     {
       "managerID": "990431317856727040",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
@@ -142,7 +142,7 @@ export const managers = [
         link: 4, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Bryson.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "Confidence isn't loud when it's certain.",
+      "philosophy": "Confidence isn't loud when it's certain."
     },
     {
       "managerID": "1073007208448753664",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
@@ -157,7 +157,7 @@ export const managers = [
         link: 3, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Kev.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "Dominate the space and endure the chaos.",
+      "philosophy": "Dominate the space and endure the chaos."
     },
         {
       "managerID": "1131320910859902976",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
@@ -172,7 +172,7 @@ export const managers = [
         link: 6, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Kyle.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "Built to last, unstoppable in motion.",
+      "philosophy": "Built to last, unstoppable in motion."
     },
   ]
   
