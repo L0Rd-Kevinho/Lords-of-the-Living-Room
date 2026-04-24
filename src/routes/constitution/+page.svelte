@@ -272,7 +272,7 @@
     <h3 bind:this={sixThree}>6.3 Replacement Incentive</h3>
     <p>In the event that a manager chooses to quit the league or is removed by a comissioner, an incoming manager is offered a 50% reduction on their first year buy-in.</p>
 
-    <h2 class="sectionHeading" bind:this={seven}>Section 7 League Finances</h2>
+    <h2 class="sectionHeading" bind:this={seven}>Section 7 League Finances and Rules</h2>
     
     <h3 bind:this={sevenOne}>7.1 League Dues</h3>
     <p>League dues are set at {dues}$. Dues will start being collected immediately following the rookie draft. Dues are collected by Kevin through venmo or zelle (contact directly for info) and collection will be sent out no later than two weeks before the start of the regular season (in line with roster cuts). All managers must be fully paid up before the start of regular season. In the event that a manager fails to pay before the deadline, a 10% penalty will be addd to their payment and will be put into the growing pot.</p>
