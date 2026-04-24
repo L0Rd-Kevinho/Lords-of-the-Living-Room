@@ -277,7 +277,7 @@
     <h3 bind:this={sevenOne}>7.1 League Dues</h3>
     <p>League dues are set at {dues}$. Dues will start being collected immediately following the rookie draft. Dues are collected by Kevin through venmo or zelle (contact directly for info) and collection will be sent out no later than two weeks before the start of the regular season (in line with roster cuts). All managers must be fully paid up before the start of regular season. In the event that a manager fails to pay before the deadline, a 10% penalty will be addd to their payment and will be put into the growing pot.</p>
 
-    <p>League dues are split into two pots each collecting 50% ($100). The first pot will be given to the winners of that year's league (see below for details). The 2nd pot will be put into a high yiels savings account and grow year over year until a league member wins back to back championships or whoever wins 3 championships first. In that event the winner will receive the entirety of the 2nd pot. Interest is handled separately and is further explained below.</p>
+    <p>League dues are split into two pots each collecting 50% ($100). The first pot will be given to the winners of that year's league (see below for details). The 2nd pot will be put into a high yield savings account and grow year over year until a league member wins back to back championships or whoever wins 3 championships first. In that event the winner will receive the entirety of the 2nd pot. Interest is handled separately and is further explained below.</p>
     
     <h3 bind:this={sevenTwo}>7.2 Payout</h3>
     <p>League payout is structured as follows for a yearly winner (meaning winners of that years fantasy season):</p>
