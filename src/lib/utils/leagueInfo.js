@@ -91,7 +91,7 @@ export const managers = [
       "bio": "The lone Packer fan, Bryson carries decades of tradition, confidence, and unshaken optimism into every season. Win or loss, he drafts, trades, and debates with the quiet certainty of someone who trusts the process - and the history - more than the noise. Loyalty first, patience always, and a belief that things tend to work out...especially for him.",
       "photo": "/managers/Bryson.jpg", // square ratio recommended (no larger than 500x500)
       "favoriteTeam": "gb", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-      "mode": "Win Now", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
+      "mode": "Rebuild", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
       "rival": {
         name: "Ben", // Can be anything (usually your rival's name)
         link: 7, // manager array number within this array, or null to link back to all managers page
