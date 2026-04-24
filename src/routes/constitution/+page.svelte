@@ -232,14 +232,14 @@
     <h2 class="sectionHeading" bind:this={two}>Section 2 Drafts</h2>
 
     <h3 bind:this={twoOne}>2.1 Draft Day</h3>
-    <p>Each year we will strive to have an in person draft that takes place the weekend after the conclusion of the NFL draft (typically the first weekend in May). Owners that live out of state are exempt, it is expected that those who can make it, will make it. Not attending a live draft results will bar you from being able to make waiver wire pickups following the draft for one week. Repeatated offenses will result in a conversation and potential expulsion from the league.</p>
-    <p>It is fully expected that each team drafts their own team and does not auto draft. If a team auto drafts, it will result in expulsion from the league as the date and time of the draft has been well known and documented.</p>
+    <p>Each year we will strive to have an in person draft that takes place the weekend after the conclusion of the NFL draft (typically the first weekend in May). Owners that live out of state are exempt, it is expected that those who can make it, will make it. Not attending a live draft will bar you from being able to make waiver wire pickups following the draft for one week. Repeatated offenses will result in a conversation and potential expulsion from the league.</p>
+    <p>It is fully expected that each team drafts their own team and does not auto draft. If a team auto drafts, it will result in expulsion from the league as the date and time of the draft has been well known and documented (please just communicate ahead of time if you are unable to make the draft).</p>
 
     <h3 bind:this={twoTwo}>2.2 Draft Order</h3>
     <p>The draft order each year will be a linear draft in order of teams with least amount of maximum possible pf (i.e. if you set a perfect lineup every week) for teams finishing 5 - 10. Teams finishing 1-4 will receive their draft pick in reverse order of finish.</p>
 
     <h3 bind:this={twoThree}>2.3 Rookie Drafts</h3>
-    <p>Rokkie drafts will consist of 4 rounds of drafting, with 5 minutes alotted for each pick. To make room for the incoming players, benches will be expanded by (4) spots. These spots will be removed exactly two weeks before the start of the regular season, at which point you will need to have cut the necessary players.</p>
+    <p>Rookie drafts will consist of 4 rounds of drafting, with 5 minutes alotted for each pick. To make room for the incoming players, benches will be expanded by (4) spots. These spots will be removed exactly two weeks before the start of the regular season, at which point you will need to cut the necessary players.</p>
     <p>Any spots not filled during the draft, can be filled immediately afterwards from the waiver wire as listed above.</p>
     
     <h3 bind:this={twoFour}>2.4 Draft Day Trades</h3>
