@@ -6,7 +6,7 @@
     let four, fourOne, fourTwo;
     let five, fiveOne;
     let six, sixOne, sixTwo, sixThree;
-    let seven, sevenOne, sevenTwo, sevenThree;
+    let seven, sevenOne, sevenTwo, sevenThree, sevenFour;
 
     const goToSection = (section) => {
         const top = section.getBoundingClientRect().top + window.pageYOffset;
@@ -134,12 +134,12 @@
         <h4 class="noUnderscore clickable" onclick={() => goToSection(sixTwo)}>6.2 Replacing Managers</h4>
         <h4 class="noUnderscore clickable" onclick={() => goToSection(sixThree)}>6.3 Replacement Incentive</h4>
 
-    <h3 class="noUnderscore clickable" onclick={() => goToSection(seven)}>Section 7: League Finances</h3>
+    <h3 class="noUnderscore clickable" onclick={() => goToSection(seven)}>Section 7: League Finances and Rules</h3>
     
         <h4 class="noUnderscore clickable" onclick={() => goToSection(sevenOne)}>7.1 League Dues</h4>
-        <h4 class="noUnderscore clickable" onclick={() => goToSection(sixTwo)}>7.2 Payout</h4>
-        <h4 class="noUnderscore clickable" onclick={() => goToSection(sixThree)}>7.3 Raising Dues</h4>
-    
+        <h4 class="noUnderscore clickable" onclick={() => goToSection(sevenTwo)}>7.2 Payout</h4>
+        <h4 class="noUnderscore clickable" onclick={() => goToSection(sevenThree)}>7.3 Raising Dues</h4>
+        <h4 class="noUnderscore clickable" onclick={() => goToSection(sevenFour)}>7.4 Rules and Rule chanegs</h4> 
     
     <hr />
     
@@ -292,6 +292,11 @@
     <p>In the event that a manager was fined due to late payment, their extra fee will be added to the growing pot and paid out to the winner of said pot. Similarly, if new managers come into the league, the difference will come out of the growing pot and will be announced to the league by the commissioner.</p>
     
     <h3 bind:this={sevenThree}>7.3 Raising Dues</h3>
-    <p>A ⅔ majority vote is required in order to change league dues. In the event that a manager is no longer financially comfortable with the buyin, finding a co-manager to split the cost is reccomended.</p>
+    <p>A majority vote is required in order to change league dues. In the event that a manager is no longer financially comfortable with the buyin, finding a co-manager to split the cost is reccomended.</p>
+    </ul>
+    
+    <h3 bind:this={sevenFour}>7.4 Rules</h3>
+    <p>New rules or rule changes may be brought to the attention of the comissioner during the offseason. New rules and rule changes will be voted on by the league on draft day and require a mjority to pass. In the event of a tie, the comissioner's vote breaks the tie. All new rules will be added to the constitution.</p>
+    </ul>
 
 </div>
