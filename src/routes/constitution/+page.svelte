@@ -1,6 +1,6 @@
 <script>
     import { dues } from '$lib/utils/helper';
-    let one, oneOne, oneOneOne, oneTwo, oneTwoOne, oneTwoTwo, oneTwoThree, oneTwoFour, oneTwoFive, oneThree;
+    let one, oneOne, oneOneOne, oneTwo, oneTwoOne, oneTwoTwo, oneTwoThree, oneTwoFour, oneTwoFive, oneThree, oneFour;
     let two, twoOne, twoTwo, twoThree, twoFour;
     let three, threeOne;
     let four, fourOne, fourTwo;
@@ -108,6 +108,7 @@
             <h5 class="noUnderscore clickable" onclick={() => goToSection(oneTwoTwo)}>1.2.2 Lending Players Prohibition</h5>
             <h5 class="noUnderscore clickable" onclick={() => goToSection(oneTwoThree)}>1.2.3 Trade Deadline</h5>
         <h4 class="noUnderscore clickable" onclick={() => goToSection(oneThree)}>1.3 Waiver Wire</h4>
+        <h4 class="noUnderscore clickable" onclick={() => goToSection(oneFour)}>1.4 LineUp</h4>
     
     <h3 class="noUnderscore clickable" onclick={() => goToSection(two)}>Section 2: Drafting</h3>
     
@@ -217,6 +218,16 @@
     <p>FAAB will replenish to $500 in the offsesason and replenish again once the regular season start.</p>
 
     <p>Off-Season waiver wires moves (i.e. post week 17) will remain locked until the rookie draft has been completed. At which point the waiver wire will open up immediately.</p>
+
+    <h3 bind:this={oneFour}>1.4 Lineup</h3>
+
+    <p>Players must do everything they can to set an active lineup each week of the fantasy football season. This includes ensuring that all starting roster positions are filled with eligible players who are not on bye, injured without designation, or otherwise inactive. Occasional mistakes happen and emergencies may occur. However, repeated failure to set an active lineup undermines league integrity and competitive balance. As such, the following policy is enforced:</p>
+
+        <ul>
+            <li>First Offense – A warning is issued and no penalty applied</li>
+            <li>Second Offense – The manager will receive a 2 week waiver wire ban, during which they will be prohibited from placing FAAB bids</li>
+            <li>Third Offense – Manager removed from league </li>
+        </ul>
     
     <h2 class="sectionHeading" bind:this={two}>Section 2 Drafts</h2>
 
