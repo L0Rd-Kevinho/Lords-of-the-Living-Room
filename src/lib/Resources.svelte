@@ -27,8 +27,8 @@ import { dynasty } from './utils/helper';
             dynastyOnly: true,
         },
         {
-            name: "DynastyProcess Trade Calculator",
-            url: "https://apps.dynastyprocess.com/calculator/",
+            name: "Keep Trade Cut",
+            url: "https://keeptradecut.com/trade-calculator",
             icon: "calculate",
             premium: false,
             separator: true,
