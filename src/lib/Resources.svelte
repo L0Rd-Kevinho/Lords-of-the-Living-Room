@@ -58,15 +58,7 @@ import { dynasty } from './utils/helper';
             separator: true,
             redraftOnly: true,
         },
-        {
-            name: "Dynasty 101 Trade Calculator",
-            url: "https://dynasty101.com/trade-calculator/",
-            icon: "calculate",
-            premium: false,
-            separator: true,
-            dynastyOnly: true,
-        },
-        {
+         {
             name: "Dynasty Nerds GM",
             url: "https://gm.dynastynerds.com/",
             icon: "insights",
@@ -81,13 +73,6 @@ import { dynasty } from './utils/helper';
             premium: false,
             separator: true,
             redraftOnly: true,
-        },
-        {
-            name: "Reddit FF Trade Analyzer",
-            url: "https://www.reddit.com/r/TradeAnalyzerFF/",
-            icon: "assessment",
-            premium: false,
-            separator: true,
         },
         {
             name: "FantasyCalc Trade Calculator",
