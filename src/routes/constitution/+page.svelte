@@ -1,7 +1,7 @@
 <script>
     import { dues } from '$lib/utils/helper';
     let one, oneOne, oneOneOne, oneTwo, oneTwoOne, oneTwoTwo, oneTwoThree, oneTwoFour, oneTwoFive, oneThree;
-    let two, twoOne, twoTwo, twoThree;
+    let two, twoOne, twoTwo, twoThree, twoFour;
     let three, threeOne;
     let four, fourOne, fourTwo;
     let five, fiveOne;
@@ -287,17 +287,15 @@
         <li>1st place: {dues * 3.25}$</li>
         <li>2nd place: {dues * 1.25}$</li>
         <li>3rd place: {dues * .5}$</li>
-    <ul>
+    </ul>
     
     <p>Accrued interest will be dealt out to members of the league in the form of a discount to collection (i.e. if $50 of interest accreud over the year, each member will get a $5 discount to the next year's entry fee) such that the amount that is in the high yield savings account is always multiples of $1,000</p>
     <p>In the event that a manager was fined due to late payment, their extra fee will be added to the growing pot and paid out to the winner of said pot. Similarly, if new managers come into the league, the difference will come out of the growing pot and will be announced to the league by the commissioner.</p>
     
     <h3 bind:this={sevenThree}>7.3 Raising Dues</h3>
     <p>A majority vote is required in order to change league dues. In the event that a manager is no longer financially comfortable with the buyin, finding a co-manager to split the cost is reccomended.</p>
-    </ul>
     
     <h3 bind:this={sevenFour}>7.4 Rules</h3>
     <p>New rules or rule changes may be brought to the attention of the comissioner during the offseason. New rules and rule changes will be voted on by the league on draft day and require a mjority to pass. In the event of a tie, the comissioner's vote breaks the tie. All new rules will be added to the constitution.</p>
-    </ul>
 
 </div>
