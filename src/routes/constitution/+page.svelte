@@ -277,18 +277,23 @@
     <h2 class="sectionHeading" bind:this={seven}>Section 7 League Finances</h2>
     
     <h3 bind:this={sevenOne}>7.1 League Dues</h3>
-    <p>League dues are set at {dues}$. Dues are collected through <a href="https://www.leaguesafe.com/league/3949641">LeagueSafe</a> and collection will be sent out no later than the first of August. All managers must be fully paid up before the start of regular season. In the event that a manager fails to pay before the deadline, a 10% penalty will be addd to their payment and will go towards the payouts at the end of the year.</p>
+    <p>League dues are set at {dues}$. Dues will start being collected immediately following the rookie draft. Dues are collected by Kevin through venmo or zelle (contact directly for info) and collection will be sent out no later than two weeks before the start of the regular season (in line with roster cuts). All managers must be fully paid up before the start of regular season. In the event that a manager fails to pay before the deadline, a 10% penalty will be addd to their payment and will be put into the growing pot.</p>
+
+    <p>League dues are split into two pots each collecting 50% ($100). The first pot will be given to the winners of that year's league (see below for details). The 2nd pot will be put into a high yiels savings account and grow year over year until a league member wins back to back championships or whoever wins 3 championships first. In that event the winner will receive the entirety of the 2nd pot. Interest is handled separately and is further explained below.</p>
     
     <h3 bind:this={sevenTwo}>7.2 Payout</h3>
-    <p>League payout is structured as follows:</p>
+    <p>League payout is structured as follows for a yearly winner (meaning winners of that years fantasy season):</p>
     <ul>
-        <li>1st place: {dues * 8}$</li>
-        <li>2nd place: {dues * 3}$</li>
-        <li>3rd place: {dues}$</li>
+        <li>1st place: {dues * 3.25}$</li>
+        <li>2nd place: {dues * 1.25}$</li>
+        <li>3rd place: {dues * .5}$</li>
+
+    <p>Accrued interest will be dealt out to members of the league in the form of a discount to collection (i.e. if $50 of interest accreud over the year, each member will get a $5 discount to the next year's entry fee) such that the amount that is in the high yield savings account is always multiples of $1,000</p>
+
     </ul>
-    <p>In the event that a manager was fined due to late payment, their extra fee will be added to the winner's payout. Similarly, if new managers come into the league and the payout is smaller, the difference will come out of the winner's prize.</p>
+    <p>In the event that a manager was fined due to late payment, their extra fee will be added to the growing pot and paid out to the winner of said pot. Similarly, if new managers come into the league, the difference will come out of the growing pot and will be announced to the league by the commissioner.</p>
     
     <h3 bind:this={sevenThree}>7.3 Raising Dues</h3>
-    <p>A ⅔ majority vote is required in order to raise league dues. In the event that a manager is no longer financially comfortable with the buyin, finding a co-manager to split the cost is reccomended.</p>
+    <p>A ⅔ majority vote is required in order to change league dues. In the event that a manager is no longer financially comfortable with the buyin, finding a co-manager to split the cost is reccomended.</p>
 
 </div>
