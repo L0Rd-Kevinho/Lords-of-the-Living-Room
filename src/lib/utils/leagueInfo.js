@@ -37,7 +37,8 @@ export const managers = [
         link: 5, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Josh.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "Never wrong, just early."
+      "philosophy": "Never wrong, just early.",
+      "preferredContact": "Text"
     },
     {
       "managerID": "656656370883448832",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
@@ -52,7 +53,8 @@ export const managers = [
         link: 2, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Cam.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "Less talk, more results."
+      "philosophy": "Less talk, more results.",
+      "preferredContact": "Text"
     },
     {
       "managerID": "703266307541389312",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
@@ -67,7 +69,8 @@ export const managers = [
         link: 3, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Kev.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "Talk big, win often."
+      "philosophy": "Talk big, win often.",
+      "preferredContact": "Sleeper"
     },
     {
       "managerID": "706608625463947264",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
@@ -82,7 +85,8 @@ export const managers = [
         link: 2, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Cam.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "Control is established, outcomes are inevitable."
+      "philosophy": "Control is established, outcomes are inevitable.",
+      "preferredContact": "Sleeper"
     },
     {
       "managerID": "715072573137838080",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
@@ -97,7 +101,8 @@ export const managers = [
         link: 7, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Ben.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "Others hope, history assures."
+      "philosophy": "Others hope, history assures.",
+      "preferredContact": "Sleeper"
     },
     {
       "managerID": "736259514256445440",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
@@ -112,7 +117,8 @@ export const managers = [
         link: 0, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Lucas.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "It's not arrogance when you're just better."
+      "philosophy": "It's not arrogance when you're just better.",
+      "preferredContact": "Sleeper"
     },
     {
       "managerID": "987399674455810048",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
@@ -127,7 +133,8 @@ export const managers = [
         link: 9, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Kinels.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "Outwork, win, and look good."
+      "philosophy": "Outwork, win, and look good.",
+      "preferredContact": "Text"
     },
     {
       "managerID": "990431317856727040",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
@@ -142,7 +149,8 @@ export const managers = [
         link: 4, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Bryson.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "Confidence isn't loud when it's certain."
+      "philosophy": "Confidence isn't loud when it's certain.",
+      "preferredContact": "Sleeper"
     },
     {
       "managerID": "1256726575739568128",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
@@ -157,7 +165,8 @@ export const managers = [
         link: 3, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Kev.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "Why pick a side when you can join the winner."
+      "philosophy": "Why pick a side when you can join the winner.",
+      "preferredContact": "Sleeper"
     },
         {
       "managerID": "1131320910859902976",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
@@ -172,7 +181,8 @@ export const managers = [
         link: 6, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Kyle.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "Built to last, unstoppable in motion."
+      "philosophy": "Built to last, unstoppable in motion.",
+      "preferredContact": "Text"
     },
   ]
   
