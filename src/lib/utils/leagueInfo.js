@@ -145,19 +145,19 @@ export const managers = [
       "philosophy": "Confidence isn't loud when it's certain."
     },
     {
-      "managerID": "1073007208448753664",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
-      "name": "Phil Unseth",
-      "location": "Twin Cities", // (optional)
-      "bio": "Phil is the loudest, biggest presence in the room - impossible to ignore, impossible to forget, and absolutely on his own volume setting. Obnoxious at first glance but undeniably funny, he plays the league the same way he enters a conversation: full force and unapologetic. You don't get used to Phil - he makes sure you adapt",
-      "photo": "/managers/Phil.jpg", // square ratio recommended (no larger than 500x500)
-      "favoriteTeam": "min", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+      "managerID": "1256726575739568128",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
+      "name": "Takeshi Komar",
+      "location": "Dallas", // (optional)
+      "bio": "Born of pacific calm and island fire, Takeshi joins the league as a devoted follower of greatness. He aligns himself with power at its peak and moves on before decline is visible to others. He arrives battle tested and unburdened by sentiment. He does not chase narratives or rebuilds; he chases trophies. If elite talent gathers, expect Takeshi to already be there ready to ride the next dynasty to glory.",
+      "photo": "/managers/Takeshi.jpg", // square ratio recommended (no larger than 500x500)
+      "favoriteTeam": "dal", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
       "mode": "Win Now", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
       "rival": {
         name: "Kevin", // Can be anything (usually your rival's name)
         link: 3, // manager array number within this array, or null to link back to all managers page
         image: "/managers/Kev.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
       },
-      "philosophy": "Dominate the space and endure the chaos."
+      "philosophy": "Why pick a side when you can join the winner."
     },
         {
       "managerID": "1131320910859902976",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
