@@ -5,7 +5,7 @@
     export let playersInfo;
     export let fantasyValues;
 
-    // ✅ Build value map safely
+    // ✅ Build value map
     const fcPlayers = fantasyValues?.players || [];
 
     const valueMap = {};
@@ -30,44 +30,32 @@
     }
 </style>
 
-{#if rosterData && playersInfo}
+<!-- ✅ LOOP TEAMS (same as your original pattern) -->
+{#each rosterData as roster}
+    <div class="team">
 
-    {#each rosterData as roster}
-        <div class="team">
+        <h3>
+            {leagueTeamManagers?.find(m => m.roster_id === roster.roster_id)?.name 
+                || `Team ${roster.roster_id}`}
+        </h3>
 
-            <!-- ✅ Team Name -->
-            <h3>
-                {leagueTeamManagers?.find(m => m.roster_id === roster.roster_id)?.name 
-                    || `Team ${roster.roster_id}`}
-            </h3>
+        <!-- ✅ LOOP PLAYERS -->
+        {#each roster.players || [] as playerId}
 
-            <!-- ✅ SAFE check BEFORE looping -->
-            {#if roster.players && Array.isArray(roster.players)}
+            {@const player = playersInfo?.[playerId]}
 
-                {#each roster.players as playerId}
+            <div class="playerRow">
+                <span class="name">
+                    {player?.full_name || player?.name || 'Unknown'}
+                    ({player?.position || ''})
+                </span>
 
-                    {@const player = playersInfo[playerId]}
+                <span>
+                    {Math.round(valueMap[String(playerId)] || 0)}
+                </span>
+            </div>
 
-                    <div class="playerRow">
-                        <span class="name">
-                            {player?.full_name || player?.name || 'Unknown'}
-                            ({player?.position || ''})
-                        </span>
+        {/each}
 
-                        <span>
-                            {Math.round(valueMap[String(playerId)] || 0)}
-                        </span>
-                    </div>
-
-                {/each}
-
-            {:else}
-                <p>No players found</p>
-            {/if}
-
-        </div>
-    {/each}
-
-{:else}
-    <p>Loading roster display...</p>
-{/if}
+    </div>
+{/each}
