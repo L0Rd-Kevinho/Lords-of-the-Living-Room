@@ -9,7 +9,7 @@ export async function load({ fetch }) {
 
     const fantasyValues = await fcRes.json();
 
-    // ✅ Your existing league data
+    // ✅ Your league data (IMPORTANT: don't break it)
     const leagueTeamManagersData = getLeagueTeamManagers();
     const playersData = loadPlayers(fetch);
 
@@ -20,7 +20,7 @@ export async function load({ fetch }) {
     };
 
   } catch (err) {
-    console.error(err);
+    console.error('POWER PAGE ERROR:', err);
 
     return {
       fantasyValues: { players: [] },
@@ -29,4 +29,3 @@ export async function load({ fetch }) {
     };
   }
 }
-``
