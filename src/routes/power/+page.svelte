@@ -17,11 +17,14 @@
   <option value="TE">TE</option>
 </select>
 
-{#await waitForAll(data.playersData, data.leagueTeamManagersData, data.fantasyValues)}
+{#await data.playersData}
   <p>Loading Power Rankings...</p>
 
-{:then [players, managers, fantasyValues]}
+{:then players}
+
+  {@const fantasyValues = data.fantasyValues}
   {@const fcPlayers = fantasyValues.players || []}
+  {@const managers = data.leagueTeamManagersData || []}
 
   {@const valueMap = Object.fromEntries(
     fcPlayers.map(p => [p.player.sleeperId, p.value])
@@ -44,10 +47,13 @@
         };
       }
 
-      const value = valueMap[player.player_id] || 0;
+      const playerId =
+        player.player_id || player.playerId || player.id;
+
+      const value = valueMap[playerId] || 0;
 
       t[teamId].players.push({
-        name: player.full_name,
+        name: player.full_name || player.name,
         position: player.position,
         value
       });
@@ -91,7 +97,9 @@
       {#if openTeam === team}
         <ul>
           {#each team.players.sort((a, b) => b.value - a.value) as p}
-            <li>{p.name} ({p.position}) — {Math.round(p.value)}</li>
+            <li>
+              {p.name} ({p.position}) — {Math.round(p.value)}
+            </li>
           {/each}
         </ul>
       {/if}
