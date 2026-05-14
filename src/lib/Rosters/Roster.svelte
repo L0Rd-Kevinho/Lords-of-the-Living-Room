@@ -4,7 +4,7 @@
 	import { Icon } from '@smui/icon-button';
 	import RosterRow from "./RosterRow.svelte"
 	
-	export let roster, leagueTeamManagers, startersAndReserve, players, rosterPositions, division, expanded, fantasyValues;
+	export let roster, leagueTeamManagers, startersAndReserve, players, rosterPositions, division, expanded;
 
 	$: team = leagueTeamManagers.teamManagersMap[leagueTeamManagers.currentSeason][roster.roster_id].team;
 
@@ -54,18 +54,14 @@
 				default:
 					break;
 			}
-player = {
-  id: singlePlayer, // ✅ ADD THIS LINE
-  name: `${passedPlayers[singlePlayer].fn} ${passedPlayers[singlePlayer].ln}${injury ? `<span class="injury ${injury}">${injury}</span>` : ""}`,
-  nickname: roster.metadata && roster.metadata[`p_nick_${singlePlayer}`] ? roster.metadata[`p_nick_${singlePlayer}`] : null,
-  poss: passedPlayers[singlePlayer].pos,
-  team: passedPlayers[singlePlayer].t,
-  avatar: passedPlayers[singlePlayer].pos == "DEF" 
-    ? `background-image: url(https://sleepercdn.com/images/team_logos/nfl/${singlePlayer.toLowerCase()}.png)` 
-    : `background-image: url(https://sleepercdn.com/content/nfl/players/thumb/${singlePlayer}.jpg), url(https://sleepercdn.com/images/v2/icons/player_default.webp)`,
-  slot: slot
-}
-
+			player = {
+				name: `${passedPlayers[singlePlayer].fn} ${passedPlayers[singlePlayer].ln}${injury ? `<span class="injury ${injury}">${injury}</span>` : ""}`,
+                nickname: roster.metadata && roster.metadata[`p_nick_${singlePlayer}`] ? roster.metadata[`p_nick_${singlePlayer}`] : null,
+				poss: passedPlayers[singlePlayer].pos,
+				team: passedPlayers[singlePlayer].t,
+				avatar: passedPlayers[singlePlayer].pos == "DEF" ? `background-image: url(https://sleepercdn.com/images/team_logos/nfl/${singlePlayer.toLowerCase()}.png)` : `background-image: url(https://sleepercdn.com/content/nfl/players/thumb/${singlePlayer}.jpg), url(https://sleepercdn.com/images/v2/icons/player_default.webp)`,
+				slot: slot
+			}
 			i++;
 			digestedRoster.push(player);
 		}
@@ -282,9 +278,9 @@ player = {
 		</Head>
 		<Body>
 			<!-- 	Starters	 -->
-{#each finalStarters as starter}
-    <RosterRow player={starter} {fantasyValues} />
-{/each}
+			{#each finalStarters as starter}
+				<RosterRow player={starter} />
+			{/each}
 			<Row class="interactive" onclick={toggleSelected}>
 				<Cell colspan=4 class="{division}"><h5><Icon class="material-icons icon">king_bed</Icon> Bench <span class="italic">({status})</span></h5></Cell>
 			</Row>
@@ -294,18 +290,18 @@ player = {
 		<DataTable class="teamInner" style="width: 380px" >
 			<Body class="bench">
 				<!-- 	Bench	 -->
-{#each finalBench as bench}
-    <RosterRow player={bench} {fantasyValues} />
-{/each}
-		
+				{#each finalBench as bench}
+					<RosterRow player={bench} />
+				{/each}
+				
 				<!-- 	IR	 -->
 				{#if finalIR}
 					<Row>
 					<Cell colspan=4 ><h5><Icon class="material-icons icon">healing</Icon> Injured Reserve</h5></Cell>
 					</Row>
-{#each finalIR as ir}
-    <RosterRow player={ir} {fantasyValues} />
-{/each}
+					{#each finalIR as ir}
+						<RosterRow player={ir} />
+					{/each}
 				{/if}
 				<Row class="interactive" onclick={toggleSelected}>
 					<Cell colspan=4 class="{division}"><h5><Icon class="material-icons icon">close_fullscreen</Icon>Close Bench</h5></Cell>
