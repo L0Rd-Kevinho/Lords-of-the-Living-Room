@@ -17,10 +17,10 @@
   <option value="TE">TE</option>
 </select>
 
-{#await data.playersData}
+{#await waitForAll(data.playersData)}
   <p>Loading Power Rankings...</p>
 
-{:then players}
+{:then [players]}
 
   {@const fantasyValues = data.fantasyValues}
   {@const fcPlayers = fantasyValues.players || []}
@@ -111,3 +111,4 @@
 {:catch err}
   <p>Error loading data</p>
 {/await}
+``
