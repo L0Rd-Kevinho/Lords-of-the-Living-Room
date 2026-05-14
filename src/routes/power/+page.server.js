@@ -1,21 +1,22 @@
-import { waitForAll } from '$lib/utils/helper';
+import { getLeagueTeamManagers, loadPlayers } from '$lib/utils/helper';
 
-export async function load() {
+export async function load({ fetch }) {
   try {
+    // ✅ FantasyCalc
     const fcRes = await fetch(
       'https://api.fantasycalc.com/values/current?isDynasty=false&numQbs=1&numTeams=12&ppr=1'
     );
 
     const fantasyValues = await fcRes.json();
 
-    // ✅ reuse your existing league loaders
-    const playersData = [];           // replace with your real function
-    const leagueTeamManagersData = []; // replace with your real function
+    // ✅ Your existing league data
+    const leagueTeamManagersData = getLeagueTeamManagers();
+    const playersData = loadPlayers(fetch);
 
     return {
       fantasyValues,
-      playersData,
-      leagueTeamManagersData
+      leagueTeamManagersData,
+      playersData
     };
 
   } catch (err) {
@@ -23,8 +24,9 @@ export async function load() {
 
     return {
       fantasyValues: { players: [] },
-      playersData: [],
-      leagueTeamManagersData: []
+      leagueTeamManagersData: [],
+      playersData: []
     };
   }
 }
+``
