@@ -1,12 +1,13 @@
 <script>
   export let data;
+
+  const players = data.fantasyValues.players || [];
 </script>
 
 <h1>Dynasty Rankings</h1>
 
-<p>Total players: {data.fantasyValues.length}</p>
+<p>Players loaded: {players.length}</p>
 
 <pre>
-{JSON.stringify(data.fantasyValues[0], null, 2)}
+{JSON.stringify(players[0], null, 2)}
 </pre>
-``
