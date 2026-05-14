@@ -1,25 +1,30 @@
+import { waitForAll } from '$lib/utils/helper';
+
 export async function load() {
   try {
-    const res = await fetch(
+    const fcRes = await fetch(
       'https://api.fantasycalc.com/values/current?isDynasty=false&numQbs=1&numTeams=12&ppr=1'
     );
 
-    if (!res.ok) {
-      console.error('Failed:', res.status);
-      return { fantasyValues: [] };
-    }
+    const fantasyValues = await fcRes.json();
 
-    const data = await res.json();
+    // ✅ reuse your existing league loaders
+    const playersData = [];           // replace with your real function
+    const leagueTeamManagersData = []; // replace with your real function
 
     return {
-      fantasyValues: data
+      fantasyValues,
+      playersData,
+      leagueTeamManagersData
     };
 
   } catch (err) {
     console.error(err);
+
     return {
-      fantasyValues: []
+      fantasyValues: { players: [] },
+      playersData: [],
+      leagueTeamManagersData: []
     };
   }
 }
-``
