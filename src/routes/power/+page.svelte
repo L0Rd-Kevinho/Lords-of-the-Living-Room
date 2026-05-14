@@ -5,70 +5,69 @@
     export let playersInfo;
     export let fantasyValues;
 
-    // ✅ Build value map from FantasyCalc
+    // ✅ Build value map safely
     const fcPlayers = fantasyValues?.players || [];
 
     const valueMap = {};
     fcPlayers.forEach(p => {
-        valueMap[p.player.sleeperId] = p.value;
+        valueMap[String(p.player.sleeperId)] = p.value;
     });
 </script>
 
 <style>
     .team {
-        margin-bottom: 30px;
-    }
-
-    .team h3 {
-        margin-bottom: 10px;
+        margin-bottom: 25px;
     }
 
     .playerRow {
         display: flex;
         justify-content: space-between;
         padding: 4px 0;
-        border-bottom: 1px solid #eee;
     }
 
-    .playerName {
+    .name {
         font-weight: 500;
-    }
-
-    .playerValue {
-        color: #555;
-    }
-
-    .position {
-        margin-left: 6px;
-        color: #888;
-        font-size: 0.9em;
     }
 </style>
 
-<!-- ✅ LOOP THROUGH TEAMS -->
-{#each rosterData as roster}
-    <div class="team">
+{#if rosterData && playersInfo}
 
-        <!-- ✅ TEAM NAME -->
-        <h3>
-            {leagueTeamManagers.find(m => m.roster_id === roster.roster_id)?.name || `Team ${roster.roster_id}`}
-        </h3>
+    {#each rosterData as roster}
+        <div class="team">
 
-        <!-- ✅ PLAYERS -->
-        {#each roster.players as playerId}
-            {@const player = playersInfo[playerId]}
+            <!-- ✅ Team Name -->
+            <h3>
+                {leagueTeamManagers?.find(m => m.roster_id === roster.roster_id)?.name 
+                    || `Team ${roster.roster_id}`}
+            </h3>
 
-            <div class="playerRow">
-                <span class="playerName">
-                    {player?.full_name || player?.name || 'Unknown'}
-                    <span class="position">({player?.position || ''})</span>
-                </span>
+            <!-- ✅ SAFE check BEFORE looping -->
+            {#if roster.players && Array.isArray(roster.players)}
 
-                <span class="playerValue">
-                    {Math.round(valueMap[playerId] || 0)}
-                </span>
-            </div>
-        {/each}
+                {#each roster.players as playerId}
 
-    </div>
-{/each}
+                    {@const player = playersInfo[playerId]}
+
+                    <div class="playerRow">
+                        <span class="name">
+                            {player?.full_name || player?.name || 'Unknown'}
+                            ({player?.position || ''})
+                        </span>
+
+                        <span>
+                            {Math.round(valueMap[String(playerId)] || 0)}
+                        </span>
+                    </div>
+
+                {/each}
+
+            {:else}
+                <p>No players found</p>
+            {/if}
+
+        </div>
+    {/each}
+
+{:else}
+    <p>Loading roster display...</p>
+{/if}
