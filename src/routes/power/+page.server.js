@@ -1,23 +1,25 @@
 export async function load() {
   try {
-    const res = await fetch('https://api.fantasycalc.com/values/current');
+    const res = await fetch(
+      'https://api.fantasycalc.com/values/current?isDynasty=false&numQbs=1&numTeams=12&ppr=1'
+    );
 
     if (!res.ok) {
-      console.error('FantasyCalc fetch failed:', res.status);
+      console.error('Failed:', res.status);
       return { fantasyValues: [] };
     }
 
-    const fantasyValues = await res.json();
+    const data = await res.json();
 
     return {
-      fantasyValues: fantasyValues || []
+      fantasyValues: data
     };
 
   } catch (err) {
-    console.error('FantasyCalc error:', err);
-
+    console.error(err);
     return {
       fantasyValues: []
     };
   }
 }
+``
