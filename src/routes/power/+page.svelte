@@ -1,20 +1,20 @@
 <script>
   export let data;
 
-  // FantasyCalc data
-  const fcData = data.fantasyValues.players || [];
+  // ✅ FantasyCalc
+  const fcPlayers = data.fantasyValues.players || [];
 
-  // Build value map using sleeperId (CRITICAL)
+  // 🔥 Map values by Sleeper ID
   const valueMap = {};
-  fcData.forEach(p => {
+  fcPlayers.forEach(p => {
     valueMap[p.player.sleeperId] = p.value;
   });
 
-  // ✅ IMPORTANT: plug in your real playersData here
+  // ✅ Your league data
   const players = data.playersData || [];
   const managers = data.leagueTeamManagersData || [];
 
-  // Build teams
+  // ✅ Build teams
   function buildTeams(players) {
     const teams = {};
 
@@ -33,6 +33,7 @@
         };
       }
 
+      // ✅ IMPORTANT: match via Sleeper ID
       const value = valueMap[player.player_id] || 0;
 
       const enriched = {
@@ -100,3 +101,4 @@
 
   <hr />
 {/each}
+``
