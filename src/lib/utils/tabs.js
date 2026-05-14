@@ -44,7 +44,7 @@ export const tabs = [
             
             {
                 icon: 'bar_chart',
-                label: 'Power Rankings',
+                label: 'Dynasty Rankings',
                 dest: '/power',
             },
             {
