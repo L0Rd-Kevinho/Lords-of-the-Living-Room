@@ -172,7 +172,7 @@
         <div class="info">
 
             <!-- ✅ MODIFIED LINE BELOW -->
-            {@html player.name} — {getValue(player.player_id || player.id)}
+            {@html player.name} — {getValue(player.id)}
 
             {#if player.poss !== "DEF"}
                 <div class="additionalInfo">
