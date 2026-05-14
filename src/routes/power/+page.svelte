@@ -3,4 +3,4 @@
 </script>
 
 <h1>Dynasty Rankings</h1>
-<p>Add Dynasty Rankings</p>
+<p>Players loaded: {data.fantasyValues.length}</p>
