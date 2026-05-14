@@ -1,5 +1,5 @@
 <script>
-  import { waitForAll } from '$lib/utils/helper';
+  import LinearProgress from '@smui/linear-progress';
 
   export let data;
 
@@ -17,59 +17,52 @@
   <option value="TE">TE</option>
 </select>
 
-{#await waitForAll(data.playersData)}
-  <p>Loading Power Rankings...</p>
+{#await data.rostersInfo}
+  <div style="width:85%;margin:80px auto;">
+    <p>Loading Power Rankings...</p>
+    <LinearProgress indeterminate />
+  </div>
 
-{:then [players]}
+{:then [leagueData, rosterData, leagueTeamManagers, playersInfo]}
 
-  {@const fantasyValues = data.fantasyValues}
-  {@const fcPlayers = fantasyValues.players || []}
-  {@const managers = data.leagueTeamManagersData || []}
+  {@const fcPlayers = data.fantasyValues.players || []}
 
+  <!-- ✅ Build value map -->
   {@const valueMap = Object.fromEntries(
     fcPlayers.map(p => [p.player.sleeperId, p.value])
   )}
 
-  {@const teams = (() => {
-    const t = {};
+  <!-- ✅ Build teams from rosterData -->
+  {@const teams = rosterData.map(roster => {
+    const manager = leagueTeamManagers.find(m => m.roster_id === roster.roster_id);
 
-    players.forEach(player => {
-      const teamId = player.roster_id;
+    const players = roster.players.map(playerId => {
+      const p = playersInfo[playerId];
 
-      if (!t[teamId]) {
-        const manager = managers.find(m => m.roster_id === teamId);
-
-        t[teamId] = {
-          manager: manager?.name || `Team ${teamId}`,
-          players: [],
-          total: 0,
-          positions: {}
-        };
-      }
-
-      const playerId =
-        player.player_id || player.playerId || player.id;
-
-      const value = valueMap[playerId] || 0;
-
-      t[teamId].players.push({
-        name: player.full_name || player.name,
-        position: player.position,
-        value
-      });
-
-      t[teamId].total += value;
-
-      if (!t[teamId].positions[player.position]) {
-        t[teamId].positions[player.position] = 0;
-      }
-
-      t[teamId].positions[player.position] += value;
+      return {
+        name: p?.full_name || p?.name || 'Unknown',
+        position: p?.position || '',
+        value: valueMap[playerId] || 0
+      };
     });
 
-    return Object.values(t);
-  })()}
+    const total = players.reduce((sum, p) => sum + p.value, 0);
 
+    const positions = {};
+    players.forEach(p => {
+      if (!positions[p.position]) positions[p.position] = 0;
+      positions[p.position] += p.value;
+    });
+
+    return {
+      manager: manager?.name || `Team ${roster.roster_id}`,
+      players,
+      total,
+      positions
+    };
+  })}
+
+  <!-- ✅ Rankings -->
   {#each teams.sort((a, b) => {
     const getVal = (team) =>
       selectedPosition === 'ALL'
@@ -81,7 +74,7 @@
 
     <div
       on:click={() => openTeam = openTeam === team ? null : team}
-      style="cursor: pointer; margin: 10px 0;"
+      style="cursor:pointer;margin:10px 0;"
     >
       <h3>#{i + 1} {team.manager}</h3>
 
@@ -108,7 +101,6 @@
     <hr />
   {/each}
 
-{:catch err}
-  <p>Error loading data</p>
+{:catch error}
+  <p>Error loading data: {error.message}</p>
 {/await}
-``
