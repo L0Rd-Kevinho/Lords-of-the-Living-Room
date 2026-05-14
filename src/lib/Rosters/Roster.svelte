@@ -4,7 +4,7 @@
 	import { Icon } from '@smui/icon-button';
 	import RosterRow from "./RosterRow.svelte"
 	
-	export let roster, leagueTeamManagers, startersAndReserve, players, rosterPositions, division, expanded;
+	export let roster, leagueTeamManagers, startersAndReserve, players, rosterPositions, division, expanded, fantasyValues;
 
 	$: team = leagueTeamManagers.teamManagersMap[leagueTeamManagers.currentSeason][roster.roster_id].team;
 
@@ -278,9 +278,9 @@
 		</Head>
 		<Body>
 			<!-- 	Starters	 -->
-			{#each finalStarters as starter}
-				<RosterRow player={starter} />
-			{/each}
+{#each finalStarters as starter}
+    <RosterRow player={starter} {fantasyValues} />
+{/each}
 			<Row class="interactive" onclick={toggleSelected}>
 				<Cell colspan=4 class="{division}"><h5><Icon class="material-icons icon">king_bed</Icon> Bench <span class="italic">({status})</span></h5></Cell>
 			</Row>
@@ -290,18 +290,18 @@
 		<DataTable class="teamInner" style="width: 380px" >
 			<Body class="bench">
 				<!-- 	Bench	 -->
-				{#each finalBench as bench}
-					<RosterRow player={bench} />
-				{/each}
-				
+{#each finalBench as bench}
+    <RosterRow player={bench} {fantasyValues} />
+{/each}
+		
 				<!-- 	IR	 -->
 				{#if finalIR}
 					<Row>
 					<Cell colspan=4 ><h5><Icon class="material-icons icon">healing</Icon> Injured Reserve</h5></Cell>
 					</Row>
-					{#each finalIR as ir}
-						<RosterRow player={ir} />
-					{/each}
+{#each finalIR as ir}
+    <RosterRow player={ir} {fantasyValues} />
+{/each}
 				{/if}
 				<Row class="interactive" onclick={toggleSelected}>
 					<Cell colspan=4 class="{division}"><h5><Icon class="material-icons icon">close_fullscreen</Icon>Close Bench</h5></Cell>
