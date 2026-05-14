@@ -41,6 +41,12 @@ export const tabs = [
                 label: 'Managers',
                 dest: '/managers',
             },
+            
+            {
+                icon: 'bar_chart',
+                label: 'Power Rankings',
+                dest: '/power',
+            },
             {
                 icon: 'local_fire_department',
                 label: 'Rivalry',
